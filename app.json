@@ -1,0 +1,28 @@
+{
+    "name": "Copy Bot",
+    "description": "A simple Media Copy Bot",
+    "keywords": [
+        "telegram",
+        "channel",
+        "copy"
+    ],
+    "website": "https://github.com/m4mallu/copybot",
+    "repository": "https://github.com/m4mallu/copybot",
+    "env": {
+        "TG_BOT_TOKEN": {"description": "Your Bot Token obtained from @botfather", "required": true},
+        "API_HASH": {"description": "Your API Hash obtained from my.telegram.org", "required": true},
+        "CHANNEL_ID": {"description": "Your destination Channel Id, add -100 prefix", "required": true},
+        "ENV": {"description": "Set this to ANYTHING", "value": "ANYTHING"},
+        "APP_ID": {"description": "Your APP ID obtained from my.telegram.org", "required": true}
+    },
+    "buildpacks": [
+        {"url": "heroku/python"}
+        ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "heroku-20"
+}
